@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div class="col-sm-10 my-5">
+    <h2 class='text-center'>
+        Login Page
+    </h2>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for fm in form %}
+        <div class='form-group my-2'>
+            {{fm.label_tag}} {{fm}} <small class='text-warning'>{{ fm.errors | striptags }} </small> 
+        </div>
+        {% endfor %} 
+        <input type="submit" class='btn btn-primary my-2' value="Login">
+        {% if form.non_field_errors %}
+        {% for error in form.field.errors  %}
+            <p class='alert alert-danger'>{{error}}</p>
+        {% endfor %}
+        {% endif %}
+        
+        
+    </form>
+    
+  
+{% endblock content %}

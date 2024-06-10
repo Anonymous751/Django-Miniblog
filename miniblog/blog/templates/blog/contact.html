@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid col-md-12 my-5">
+    <h2 class='text-center'>
+        Contact Page
+    </h2>
+
+    <form class="my-5" action="">
+        <div class="row ">
+            <div class="mb-3 col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Name:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Enter Your Name here ">
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Enter Your Email Address">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-12">
+                <label for="exampleFormControlInput1" class="form-label">Address:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Address">
+            </div>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                placeholder="Enter Message here"></textarea>
+        </div>
+        <div class="submit btn btn-primary">Send</div>
+
+</div>
+</form>
+
+{% endblock content %}
